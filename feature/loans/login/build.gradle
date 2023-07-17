@@ -1,0 +1,66 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'de.mannodermaus.android-junit5'
+}
+
+android {
+    namespace 'com.panassevich.panassevich.feature.loans.login'
+    compileSdk 33
+
+    defaultConfig {
+        minSdk 23
+        targetSdk 33
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+    implementation(project(':shared:loans:core'))
+    implementation(project(':util:loans'))
+    implementation(project(':component:loans:commonclasses'))
+    implementation(project(':component:loans:resources'))
+
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+
+    //Dependency Injection
+    implementation 'com.google.dagger:dagger:2.44.2'
+
+    //ViewModelScope
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1'
+
+    //Navigation
+    implementation 'com.github.terrakok:cicerone:7.1'
+
+    def junit_version = "5.9.3"
+    // Writing and executing Unit Tests on the JUnit Platform
+    testImplementation "org.junit.jupiter:junit-jupiter-api:$junit_version"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:$junit_version"
+
+    // For Parameterized tests
+    testImplementation "org.junit.jupiter:junit-jupiter-params:$junit_version"
+    //Mockito for mocking
+    testImplementation "org.mockito.kotlin:mockito-kotlin:5.0.0"
+    testImplementation "org.mockito:mockito-junit-jupiter:5.4.0"
+    //Coroutine tests
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.1"
+}

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="NightThemeActionBarStyle" parent="Widget.AppCompat.ActionBar">
+        <item name="background">@color/teal_800</item>
+    </style>
+
+    <style name="ScreenTitleStyle">
+        <item name="android:textSize">@dimen/titleTextSize</item>
+        <item name="android:textColor">?attr/colorOnBackground</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="InputFieldStyle">
+        <item name="android:textColor">?attr/colorOnBackground</item>
+        <item name="android:textColorHint">?attr/hintTextColor</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/inputFieldHeight</item>
+    </style>
+
+    <style name="SectionTitleStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">?attr/colorOnBackground</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="CommonTextStyle">
+        <item name="android:textColor">?attr/colorOnBackground</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+</resources>

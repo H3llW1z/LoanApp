@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/backgroundColor"
+    tools:context=".ui.SettingsFragment" >
+
+    <Button
+        android:id="@+id/buttonLogOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="?attr/colorSecondary"
+        android:text="@string/log_out"
+        android:textColor="?attr/colorOnSecondary"
+        app:layout_constraintStart_toStartOf="@+id/textViewExitLabel"
+        app:layout_constraintTop_toBottomOf="@+id/textViewExitLabel" />
+
+    <Button
+        android:id="@+id/buttonBack"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonRussianLanguage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:drawableLeft="@drawable/ic_flag_ru"
+        android:drawablePadding="5dp"
+        android:text="@string/russian_language_label"
+        app:layout_constraintStart_toStartOf="@+id/buttonEnglishLanguage"
+        app:layout_constraintTop_toBottomOf="@+id/buttonEnglishLanguage" />
+
+    <Button
+        android:id="@+id/buttonEnglishLanguage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:drawableLeft="@drawable/ic_flag_us"
+        android:drawablePadding="4dp"
+        android:text="@string/english_language_label"
+        app:layout_constraintStart_toStartOf="@+id/choose_language_label"
+        app:layout_constraintTop_toBottomOf="@+id/choose_language_label" />
+
+    <TextView
+        android:id="@+id/choose_language_label"
+        style="@style/SectionTitleStyle"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/choose_of_language"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewExitLabel"
+        style="@style/SectionTitleStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/want_to_log_out_question"
+        app:layout_constraintStart_toStartOf="@+id/buttonRussianLanguage"
+        app:layout_constraintTop_toBottomOf="@+id/buttonRussianLanguage" />
+</androidx.constraintlayout.widget.ConstraintLayout>

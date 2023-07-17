@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/backgroundColor">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textViewRegistrationLabel"
+            style="@style/ScreenTitleStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/registration"
+            android:contentDescription="@string/registration_screen"
+            app:layout_constraintStart_toStartOf="@+id/editTextName"
+            app:layout_constraintTop_toTopOf="@+id/guidelineTop" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.25" />
+
+        <EditText
+            style="@style/InputFieldStyle"
+            android:id="@+id/editTextName"
+            android:layout_width="0dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="@string/user_name_hint"
+            android:inputType="text"
+            android:autofillHints="username"
+            app:layout_constraintEnd_toEndOf="@+id/editTextPassword"
+            app:layout_constraintStart_toStartOf="@+id/editTextPassword"
+            app:layout_constraintTop_toBottomOf="@+id/textViewRegistrationLabel" />
+
+        <EditText
+            android:id="@+id/editTextPassword"
+            style="@style/InputFieldStyle"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="16dp"
+            android:autofillHints="password"
+            android:ems="10"
+            android:hint="@string/password_hint"
+            android:inputType="text|textPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextName" />
+
+        <ImageButton
+            android:id="@+id/buttonTogglePasswordVisibility"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/show_or_hide_password"
+            app:layout_constraintBottom_toBottomOf="@+id/editTextPassword"
+            app:layout_constraintStart_toEndOf="@+id/editTextPassword"
+            app:layout_constraintTop_toTopOf="@+id/editTextPassword"
+            app:srcCompat="@drawable/ic_eye_off" />
+
+        <Button
+            android:id="@+id/buttonRegister"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/register"
+            app:layout_constraintEnd_toEndOf="@+id/editTextPassword"
+            app:layout_constraintStart_toStartOf="@+id/editTextPassword"
+            app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
+
+        <TextView
+            android:id="@+id/alreadyRegisteredLabel"
+            style="@style/CommonTextStyle"
+            android:layout_marginTop="16dp"
+            android:text="@string/already_registered_question"
+            app:layout_constraintStart_toStartOf="@+id/buttonAlreadyRegistered"
+            app:layout_constraintTop_toBottomOf="@+id/buttonRegister" />
+
+        <Button
+            android:id="@+id/buttonAlreadyRegistered"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="?attr/colorSecondary"
+            android:text="@string/log_in"
+            android:textColor="?attr/colorOnSecondary"
+            app:layout_constraintEnd_toEndOf="@+id/editTextPassword"
+            app:layout_constraintStart_toStartOf="@+id/editTextPassword"
+            app:layout_constraintTop_toBottomOf="@+id/alreadyRegisteredLabel" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+</FrameLayout>

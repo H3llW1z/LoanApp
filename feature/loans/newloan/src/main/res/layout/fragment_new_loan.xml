@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/backgroundColor"
+    tools:context=".ui.NewLoanFragment">
+
+    <ScrollView
+        android:id="@+id/scrollViewContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="16dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintGuide_end="16dp" />
+
+            <TextView
+                android:id="@+id/textViewConditionsLabel"
+                style="@style/SectionTitleStyle"
+                android:layout_marginTop="16dp"
+                android:text="@string/current_conditions"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewMaxAmountLabel"
+                style="@style/CommonTextStyle"
+                android:layout_marginTop="8dp"
+                android:text="@string/max_amount"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/textViewConditionsLabel" />
+
+            <TextView
+                android:id="@+id/textViewMaxAmount"
+                style="@style/CommonTextStyle"
+                app:layout_constraintBottom_toBottomOf="@+id/textViewMaxAmountLabel"
+                app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+                app:layout_constraintTop_toTopOf="@+id/textViewMaxAmountLabel"
+                tools:text="15 000 ₽" />
+
+            <TextView
+                android:id="@+id/textViewPercentLabel"
+                style="@style/CommonTextStyle"
+                android:layout_marginTop="8dp"
+                android:text="@string/percent"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/textViewMaxAmountLabel" />
+
+            <TextView
+                android:id="@+id/textViewPercent"
+                style="@style/CommonTextStyle"
+                app:layout_constraintBottom_toBottomOf="@id/textViewPercentLabel"
+                app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+                app:layout_constraintTop_toTopOf="@+id/textViewPercentLabel"
+                tools:text="9,8%" />
+
+            <TextView
+                android:id="@+id/textViewPeriodLabel"
+                style="@style/CommonTextStyle"
+                android:layout_marginTop="8dp"
+                android:text="@string/period"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@id/textViewPercentLabel" />
+
+            <TextView
+                android:id="@+id/textViewPeriod"
+                style="@style/CommonTextStyle"
+                app:layout_constraintBottom_toBottomOf="@id/textViewPeriodLabel"
+                app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+                app:layout_constraintTop_toTopOf="@+id/textViewPeriodLabel"
+                tools:text="45 дней" />
+
+            <TextView
+                android:id="@+id/textViewUserDataLabel"
+                style="@style/SectionTitleStyle"
+                android:layout_marginTop="16dp"
+                android:text="@string/fill_next_fields"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/textViewPeriodLabel" />
+
+            <EditText
+                android:id="@+id/editTextAmount"
+                style="@style/InputFieldStyle"
+                android:layout_marginTop="16dp"
+                android:ems="10"
+                android:hint="@string/amount"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/textViewUserDataLabel" />
+
+            <EditText
+                android:id="@+id/editTextName"
+                style="@style/InputFieldStyle"
+                android:layout_marginTop="16dp"
+                android:autofillHints="name"
+                android:ems="10"
+                android:hint="@string/name"
+                android:inputType="text|textPersonName|textCapWords"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/editTextAmount" />
+
+            <EditText
+                android:id="@+id/editTextLastName"
+                style="@style/InputFieldStyle"
+                android:layout_marginTop="16dp"
+                android:autofillHints="lastName"
+                android:ems="10"
+                android:hint="@string/last_name"
+                android:inputType="text|textPersonName|textCapWords"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/editTextName" />
+
+            <EditText
+                android:id="@+id/editTextPhone"
+                style="@style/InputFieldStyle"
+                android:layout_marginTop="16dp"
+                android:autofillHints="phone"
+                android:ems="10"
+                android:hint="@string/phone_number"
+                android:inputType="phone"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/editTextLastName" />
+
+            <TextView
+                android:id="@+id/textViewInstructionLabel"
+                style="@style/SectionTitleStyle"
+                android:layout_marginTop="16dp"
+                android:text="@string/how_to_get_loan_question"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/editTextPhone" />
+
+            <TextView
+                android:id="@+id/textViewInstruction"
+                style="@style/CommonTextStyle"
+                android:layout_width="0dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/get_loan_instruction"
+                app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/textViewInstructionLabel" />
+
+            <TextView
+                android:id="@+id/textViewHaveQuestionsLabel"
+                style="@style/SectionTitleStyle"
+                android:layout_marginTop="16dp"
+                android:text="@string/have_questions"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/textViewInstruction" />
+
+            <TextView
+                android:id="@+id/textViewBankPhone"
+                style="@style/CommonTextStyle"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="@string/bank_support_phone"
+                android:textStyle="bold"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/textViewHaveQuestionsLabel" />
+
+            <ImageView
+                android:id="@+id/imageViewPhoneIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:importantForAccessibility="no"
+                android:src="@drawable/ic_phone"
+                app:layout_constraintStart_toEndOf="@+id/textViewBankPhone"
+                app:layout_constraintTop_toTopOf="@+id/textViewBankPhone" />
+
+            <Button
+                android:id="@+id/buttonSendRequest"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/send_request"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@id/textViewBankPhone" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/imageViewError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:importantForAccessibility="no"
+        android:src="@drawable/ic_error"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/textViewError"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/textViewError"
+        style="@style/CommonTextStyle"
+        android:layout_marginTop="8dp"
+        android:text="@string/cant_load_data"
+        android:textSize="20sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewError"
+        app:layout_constraintStart_toStartOf="@+id/imageViewError"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewError" />
+
+    <Button
+        android:id="@+id/buttonTryAgain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/try_again"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/textViewError"
+        app:layout_constraintStart_toStartOf="@+id/textViewError"
+        app:layout_constraintTop_toBottomOf="@+id/textViewError" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/backgroundColor">
+
+    <ImageView
+        android:id="@+id/instructionImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="@string/screen_image"
+        app:layout_constraintBottom_toTopOf="@id/guidelineBottomOfImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/sample_main_screen" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineBottomOfImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.7" />
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        style="@style/SectionTitleStyle"
+        android:layout_width="0dp"
+        app:layout_constraintEnd_toEndOf="@+id/textViewDescription"
+        app:layout_constraintStart_toStartOf="@+id/textViewDescription"
+        app:layout_constraintTop_toTopOf="@+id/guidelineBottomOfImage"
+        tools:text="Добро пожаловать!" />
+
+    <TextView
+        android:id="@+id/textViewDescription"
+        style="@style/CommonTextStyle"
+        android:layout_width="0dp"
+        android:layout_margin="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitle"
+        tools:text="Оформите займ и отслеживайте его статус." />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

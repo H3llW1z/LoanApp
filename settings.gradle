@@ -1,0 +1,28 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "Panassevich"
+include ':app'
+include ':shared:loans:core'
+include ':feature:loans:login'
+include ':feature:loans:registration'
+include ':feature:loans:tutorial'
+include ':feature:loans:loanslist'
+include ':feature:loans:loandetails'
+include ':feature:loans:newloan'
+include ':feature:loans:loancreated'
+include ':feature:loans:settings'
+include ':component:loans:commonclasses'
+include ':component:loans:resources'
+include ':util:loans'

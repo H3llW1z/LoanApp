@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayoutDetails"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/backgroundColor"
+    tools:context=".ui.LoanDetailsFragment">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="16dp" />
+
+        <TextView
+            android:id="@+id/textViewBasicInfoLabel"
+            style="@style/SectionTitleStyle"
+            android:layout_marginTop="16dp"
+            android:text="@string/basic_info"
+            app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewIdLabel"
+            style="@style/CommonTextStyle"
+            android:layout_marginTop="8dp"
+            android:text="@string/loan_id"
+            app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/textViewBasicInfoLabel" />
+
+        <TextView
+            android:id="@+id/textViewId"
+            style="@style/CommonTextStyle"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewIdLabel"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+            app:layout_constraintTop_toTopOf="@+id/textViewIdLabel"
+            tools:text="23498326" />
+
+        <TextView
+            android:id="@+id/textViewAmountLabel"
+            style="@style/CommonTextStyle"
+            android:layout_marginTop="8dp"
+            android:text="@string/amount"
+            app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/textViewIdLabel" />
+
+        <TextView
+            android:id="@+id/textViewAmount"
+            style="@style/CommonTextStyle"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewAmountLabel"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+            app:layout_constraintTop_toTopOf="@+id/textViewAmountLabel"
+            tools:text="15 000 ₽" />
+
+        <TextView
+            android:id="@+id/textViewDateLabel"
+            style="@style/CommonTextStyle"
+            android:layout_marginTop="8dp"
+            android:text="@string/request_creation_date"
+            app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/textViewAmountLabel" />
+
+        <TextView
+            android:id="@+id/textViewDate"
+            style="@style/CommonTextStyle"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewDateLabel"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+            app:layout_constraintTop_toTopOf="@+id/textViewDateLabel"
+            tools:text="21.06.2023" />
+
+        <TextView
+            android:id="@+id/textViewStatusLabel"
+            style="@style/CommonTextStyle"
+            android:layout_marginTop="8dp"
+            android:text="@string/status"
+            app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/textViewDateLabel" />
+
+        <TextView
+            android:id="@+id/textViewStatus"
+            style="@style/CommonTextStyle"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewStatusLabel"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+            app:layout_constraintTop_toTopOf="@+id/textViewStatusLabel"
+            tools:text="Одобрен" />
+
+        <TextView
+            android:id="@+id/textViewConditionsLabel"
+            style="@style/SectionTitleStyle"
+            android:layout_marginTop="16dp"
+            android:text="@string/conditions"
+            app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/textViewStatusLabel" />
+
+        <TextView
+            android:id="@+id/textViewPercentLabel"
+            style="@style/CommonTextStyle"
+            android:layout_marginTop="8dp"
+            android:text="@string/percent"
+            app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/textViewConditionsLabel" />
+
+        <TextView
+            android:id="@+id/textViewPercent"
+            style="@style/CommonTextStyle"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewPercentLabel"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+            app:layout_constraintTop_toTopOf="@+id/textViewPercentLabel"
+            tools:text="9%" />
+
+        <TextView
+            android:id="@+id/textViewPeriodLabel"
+            style="@style/CommonTextStyle"
+            android:layout_marginTop="8dp"
+            android:text="@string/period"
+            app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/textViewPercentLabel" />
+
+        <TextView
+            android:id="@+id/textViewPeriod"
+            style="@style/CommonTextStyle"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewPeriodLabel"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+            app:layout_constraintTop_toTopOf="@+id/textViewPeriodLabel"
+            tools:text="45 дней" />
+
+        <TextView
+            android:id="@+id/textViewPersonalInfoLabel"
+            style="@style/SectionTitleStyle"
+            android:layout_marginTop="16dp"
+            android:text="@string/client_info"
+            app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/textViewPeriodLabel" />
+
+        <TextView
+            android:id="@+id/textViewNameLabel"
+            style="@style/CommonTextStyle"
+            android:layout_marginTop="8dp"
+            android:text="@string/client_name"
+            app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/textViewPersonalInfoLabel" />
+
+        <TextView
+            android:id="@+id/textViewName"
+            style="@style/CommonTextStyle"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewNameLabel"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+            app:layout_constraintTop_toTopOf="@+id/textViewNameLabel"
+            tools:text="Иванов Иван" />
+
+        <TextView
+            android:id="@+id/textViewPhoneLabel"
+            style="@style/CommonTextStyle"
+            android:layout_marginTop="8dp"
+            android:text="@string/phone_number"
+            app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/textViewNameLabel" />
+
+        <TextView
+            android:id="@+id/textViewPhone"
+            style="@style/CommonTextStyle"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewPhoneLabel"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+            app:layout_constraintTop_toTopOf="@+id/textViewPhoneLabel"
+            tools:text="88005553535" />
+
+        <TextView
+            android:id="@+id/textViewHowToGetLabel"
+            style="@style/SectionTitleStyle"
+            android:layout_marginTop="24dp"
+            android:text="@string/how_to_get"
+            app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/textViewPhoneLabel" />
+
+        <TextView
+            android:id="@+id/textViewGetCash"
+            style="@style/CommonTextStyle"
+            android:layout_width="0dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/how_to_get_cash_instruction"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/textViewHowToGetLabel" />
+
+        <TextView
+            android:id="@+id/textViewGetToCard"
+            style="@style/CommonTextStyle"
+            android:layout_width="0dp"
+            android:text="@string/how_to_get_to_card_instruction"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/textViewGetCash" />
+
+    <TextView
+        android:id="@+id/textViewBankPhone"
+        style="@style/CommonTextStyle"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="@string/bank_support_phone"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewPhone"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@+id/textViewGetToCard" />
+
+        <ImageView
+            android:id="@+id/imageViewPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:importantForAccessibility="no"
+            android:src="@drawable/ic_phone"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+            app:layout_constraintStart_toEndOf="@+id/textViewBankPhone"
+            app:layout_constraintTop_toTopOf="@+id/textViewBankPhone" />
+
+    <Button
+        android:id="@+id/buttonBack"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@+id/guidelineStart" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

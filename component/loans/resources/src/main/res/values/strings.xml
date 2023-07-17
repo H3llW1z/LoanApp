@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Loans</string>
+    <string name="fill_all_fields">Fill all fields, please</string>
+    <string name="network_error_occurred">A network error has occurred</string>
+    <string name="wrong_name_or_password">Wrong login or password</string>
+    <string name="authorization">Authorization</string>
+    <string name="user_name_hint">Username</string>
+    <string name="password_hint">Password</string>
+    <string name="log_in">Log in</string>
+    <string name="register">Register</string>
+    <string name="username_occupied">Username is occupied</string>
+    <string name="registered_successfully">Registration was successful</string>
+    <string name="create_loan_request">Apply for a loan</string>
+    <string name="you_dont_have_active_loans">You don\'t have any active loans yet.</string>
+    <string name="cant_load_data">Failed to load data</string>
+    <string name="server_error_occurred">A server error has occurred</string>
+    <string name="date_template">Date: %s</string>
+    <string name="period_template">Period: %d days</string>
+    <string name="period_days_only_template">%d days</string>
+    <string name="rejected">Rejected</string>
+    <string name="registered">Registered</string>
+    <string name="approved">Approved</string>
+    <string name="amount">Amount</string>
+    <string name="request_creation_date">Date of application creation</string>
+    <string name="client_name">Client\'s name</string>
+    <string name="percent">Percent</string>
+    <string name="period">Period</string>
+    <string name="phone_number">Phone number</string>
+    <string name="status">Status</string>
+    <string name="loan_id">Loan ID</string>
+    <string name="conditions">Conditions</string>
+    <string name="client_info">Client\'s data</string>
+    <string name="basic_info">Basic information</string>
+    <string name="how_to_get">How to get it?</string>
+    <string name="how_to_get_cash_instruction">"1. To receive cash, contact any bank office. "</string>
+    <string name="how_to_get_to_card_instruction">2. To receive money to the card, contact any bank office or contact us at the phone number indicated on the card.</string>
+    <string name="bank_support_phone">Support Number: +1 (234) 567–89–10</string>
+    <string name="current_conditions">Current conditions</string>
+    <string name="max_amount">Maximum amount</string>
+    <string name="fill_next_fields">Specify the following data</string>
+    <string name="name">Name</string>
+    <string name="last_name">Last name</string>
+    <string name="send_request">Submit an application</string>
+    <string name="try_again">Try again</string>
+    <string name="max_amount_exceeded">Exceeded the maximum amount</string>
+    <string name="to_main_screen">To the main</string>
+    <string name="loan_request_created_successfully">The loan application was created successfully!</string>
+    <string name="loan_amount">Loan amount</string>
+    <string name="loan_period">Loan period</string>
+    <string name="what_to_do_next">What to do next?</string>
+    <string name="after_loan_create_instruction">After reviewing the application, a bank employee will call you. You can also monitor the status of the application in the application.</string>
+    <string name="next">Next</string>
+    <string name="registration">Registration</string>
+    <string name="show_or_hide_password">Show or hide password</string>
+    <string name="not_registered_question">Not registered yet?</string>
+    <string name="log_in_successfully">Authorization was successful</string>
+    <string name="how_to_get_loan_question">How to apply for a loan?</string>
+    <string name="get_loan_instruction">To apply for a loan, just fill in the fields above and click on the \"Apply\" button at the bottom of the screen. Your application will be received by the bank instantly. When the decision on the application is made, a bank employee will call you. You will be able to follow the status change on the home screen.</string>
+    <string name="have_questions">Any questions?</string>
+    <string name="screen_image">Screen Image</string>
+    <string name="tutorial_1_title">Welcome!</string>
+    <string name="tutorial_1_description">Apply for a loan in a couple of clicks, monitor its status, get quick access to the necessary information.</string>
+    <string name="tutorial_2_title">List of loans</string>
+    <string name="tutorial_2_description">"Here you can follow the loan statuses. To apply for a loan, click the button in the lower right corner. To update list of loans, just pull from the top edge of the screen."</string>
+    <string name="tutorial_3_title">Make a request in a minute</string>
+    <string name="tutorial_3_description">To create an application, just fill in all the fields and click the button.</string>
+    <string name="tutorial_4_title">Quick access to important information</string>
+    <string name="tutorial_4_description">Click on the loan card on the main screen and get all the information about it.</string>
+    <string name="back">Back</string>
+    <string name="log_out">Log out</string>
+    <string name="settings">Settings</string>
+    <string name="loans_title">Loans</string>
+    <string name="your_loans_title">Your loans</string>
+    <string name="loan_details_title">Loan details</string>
+    <string name="settings_title">Settings</string>
+    <string name="new_loan_title">New loan</string>
+    <string name="already_registered_question">Already registered?</string>
+    <string name="english_language_label">English</string>
+    <string name="choose_of_language">Choose language</string>
+    <string name="want_to_log_out_question">Do you want to log out?</string>
+    <string name="amount_template" translatable="false">%s ₽</string>
+    <string name="name_lastname_template" translatable="false">%s %s</string>
+    <string name="percent_template" translatable="false">%.2f%%</string>
+    <string name="bank_phone_uri" translatable="false">tel:+12345678910</string>
+    <string name="russian_language_label" translatable="false">Русский</string>
+    <string name="registration_screen">Registration screen</string>
+</resources>

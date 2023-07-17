@@ -1,0 +1,67 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+}
+
+android {
+    namespace 'com.panassevich.panassevich'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.panassevich.panassevich"
+        minSdk 24
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+    packagingOptions {
+        resources.excludes.add("META-INF/*")
+    }
+}
+
+dependencies {
+    implementation(project(":shared:loans:core"))
+    implementation(project(":feature:loans:registration"))
+    implementation(project(":feature:loans:login"))
+    implementation(project(":feature:loans:tutorial"))
+    implementation(project(":feature:loans:loanslist"))
+    implementation(project(":feature:loans:loandetails"))
+    implementation(project(":feature:loans:newloan"))
+    implementation(project(":feature:loans:loancreated"))
+    implementation(project(":feature:loans:settings"))
+    implementation(project(":util:loans"))
+    implementation(project(':component:loans:commonclasses'))
+    implementation(project(":component:loans:resources"))
+
+    //Dependency Injection
+    implementation 'com.google.dagger:dagger:2.44.2'
+    kapt 'com.google.dagger:dagger-compiler:2.44.2'
+
+    // Dagger.android Dependencies
+    implementation 'com.google.dagger:dagger-android-support:2.44.2'
+    kapt 'com.google.dagger:dagger-android-processor:2.44.2'
+
+    //Navigation
+    implementation 'com.github.terrakok:cicerone:7.1'
+
+    //Room
+    def room_version = "2.5.2"
+    implementation "androidx.room:room-runtime:$room_version"
+}
